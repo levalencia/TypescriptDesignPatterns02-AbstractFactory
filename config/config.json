@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/typescriptDesignPatterns02AbstractFactory/TypescriptDesignPatterns02AbstractFactoryWebPart.js",
+      "manifest": "./src/webparts/typescriptDesignPatterns02AbstractFactory/TypescriptDesignPatterns02AbstractFactoryWebPart.manifest.json",
+      "outputPath": "./dist/typescript-design-patterns-02-abstract-factory.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "typescriptDesignPatterns02AbstractFactoryStrings": "webparts/typescriptDesignPatterns02AbstractFactory/loc/{locale}.js"
+  }
+}

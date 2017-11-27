@@ -1,0 +1,6 @@
+{
+  "workingDir": "./temp/deploy/",
+  "account": "<!-- STORAGE ACCOUNT NAME -->",
+  "container": "typescript-design-patterns-02-abstract-factory",
+  "accessKey": "<!-- ACCESS KEY -->"
+}

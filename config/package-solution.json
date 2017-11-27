@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "typescript-design-patterns-02-abstract-factory-client-side-solution",
+    "id": "b1bf90da-3ae3-467f-abf3-e315302572e4",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/typescript-design-patterns-02-abstract-factory.sppkg"
+  }
+}
