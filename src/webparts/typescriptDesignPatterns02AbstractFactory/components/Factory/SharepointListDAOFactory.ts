@@ -1,9 +1,10 @@
 import DAOFactory from "./DAOFactory";
-import CustomerDAO from "./CustomerDAO";
+import ICustomerDAO from "./ICustomerDAO";
+import SharepointCustomerDao from "./SharepointCustomerDAO";
 
 export default class SharepointListDAOFactory extends DAOFactory{
     
-    getCustomerDAO(): CustomerDAO{
-        return new CustomerDAO();
+    getCustomerDAO(): ICustomerDAO{
+        return new SharepointCustomerDao();
     }
 }

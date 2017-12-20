@@ -1,22 +1,24 @@
-import CustomerDAO from "./CustomerDAO";
+import CustomerDAO from "./ICustomerDAO";
 import SharepointListDAOFactory from "./SharepointListDAOFactory";
 import JsonDAOFactory from "./JsonDAOFactory";
+import {Utils} from "./DatasourcesEnum";
 
 
-export default class DAOFactory{
+export default abstract class DAOFactory{
+
     public static SHAREPOINTLIST: number = 1;
     public static REMOTEJSON : number = 2;
 
     public abstract getCustomerDAO(): CustomerDAO;
 
-    public  getDAOFactory(whichFactory: number): DAOFactory {
-   
-      switch (whichFactory) {
-        case 1: 
+    public  static getDAOFactory(whichFactory: Utils.DataSources): DAOFactory {   
+        switch (whichFactory) {
+          case Utils.DataSources.SharepointList: 
             return new SharepointListDAOFactory();
-        case 2: 
+          case Utils.DataSources.JsonData: 
             return new JsonDAOFactory();      
-        default  : 
+          default  : 
             return null;
+        }
       }
 }

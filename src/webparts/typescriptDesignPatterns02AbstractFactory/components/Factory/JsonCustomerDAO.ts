@@ -1,7 +1,8 @@
-import CustomerDAO from "./CustomerDAO";
+import ICustomerDAO from "./ICustomerDAO";
 import Customer from "./Customer";
 
-export default class JsonCustomerDAO implements CustomerDAO{
+//actual implementation
+export default class JsonCustomerDAO implements ICustomerDAO{
     
     public insertCustomer(): number{
         return 1;

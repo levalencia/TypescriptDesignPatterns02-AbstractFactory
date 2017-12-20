@@ -1,7 +1,8 @@
-import CustomerDAO from "./CustomerDAO";
+import ICustomerDAO from "./ICustomerDAO";
 import Customer from "./Customer";
 
-export default class SharepointCustomerDao implements CustomerDAO{
+//actual implementations
+export default class SharepointCustomerDao implements ICustomerDAO{
     
     public insertCustomer(): number{
         return 1;

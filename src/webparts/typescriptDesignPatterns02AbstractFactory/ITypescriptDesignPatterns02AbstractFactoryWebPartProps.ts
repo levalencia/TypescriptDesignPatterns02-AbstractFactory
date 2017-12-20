@@ -1,3 +1,3 @@
 export interface ITypescriptDesignPatterns02AbstractFactoryWebPartProps {
-  description: string;
+  datasource: string;
 }

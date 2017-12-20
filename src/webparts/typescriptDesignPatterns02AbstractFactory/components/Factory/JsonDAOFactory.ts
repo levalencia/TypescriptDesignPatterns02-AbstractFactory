@@ -1,8 +1,10 @@
 import DAOFactory from "./DAOFactory";
-import CustomerDAO from "./CustomerDAO";
+import ICustomerDAO from "./ICustomerDAO";
+import JsonCustomerDAO from "./JsonCustomerDAO";
 
-export default class  extends DAOFactory{
-    getCustomerDAO(): CustomerDAO{
-        return new CustomerDAO();
+
+export default class JsonDAOFactory extends DAOFactory{
+    getCustomerDAO(): ICustomerDAO{
+        return new JsonCustomerDAO();
     }
 }

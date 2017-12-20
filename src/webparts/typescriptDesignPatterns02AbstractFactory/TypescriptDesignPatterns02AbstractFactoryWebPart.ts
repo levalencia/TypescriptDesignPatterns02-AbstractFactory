@@ -4,7 +4,8 @@ import { Version } from '@microsoft/sp-core-library';
 import {
   BaseClientSideWebPart,
   IPropertyPaneConfiguration,
-  PropertyPaneTextField
+  PropertyPaneTextField,
+  PropertyPaneDropdown
 } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'typescriptDesignPatterns02AbstractFactoryStrings';
@@ -18,7 +19,7 @@ export default class TypescriptDesignPatterns02AbstractFactoryWebPart extends Ba
     const element: React.ReactElement<ITypescriptDesignPatterns02AbstractFactoryProps > = React.createElement(
       TypescriptDesignPatterns02AbstractFactory,
       {
-        description: this.properties.description
+        description: this.properties.datasource
       }
     );
 
@@ -40,9 +41,14 @@ export default class TypescriptDesignPatterns02AbstractFactoryWebPart extends Ba
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
-                })
+                PropertyPaneDropdown('datasource', {
+                  label: 'DataSource',
+                  options: [
+                  { key: '1', text: 'Sharepoint'},
+                  { key: '2', text: 'JSON' }
+                  ],
+                  selectedKey: '4',
+                  })
               ]
             }
           ]
