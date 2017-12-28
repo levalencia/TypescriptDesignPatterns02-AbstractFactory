@@ -1,7 +1,7 @@
 import ICustomerDAO from "./ICustomerDAO";
 import Customer from "./Customer";
 
-export  class JsonCustomerDAO implements ICustomerDAO{
+  class JsonCustomerDAO implements ICustomerDAO{
     public insertCustomer(): number{
         return 1;
     }
@@ -25,3 +25,5 @@ export  class JsonCustomerDAO implements ICustomerDAO{
         return list;
     }
 }
+
+export default JsonCustomerDAO;
