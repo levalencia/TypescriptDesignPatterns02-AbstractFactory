@@ -1,7 +1,7 @@
 
-export module  Utils {
-    export enum DataSources {
-        SharepointList = "SharepointList",
-        JsonData = "JsonData"
-    };
-}
+enum DataSources {
+    SharepointList = "SharepointList",
+    JsonData = "JsonData"
+};
+
+export default DataSources;

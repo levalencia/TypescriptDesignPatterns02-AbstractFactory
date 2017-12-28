@@ -1,9 +1,7 @@
 import ICustomerDAO from "./ICustomerDAO";
 import Customer from "./Customer";
 
-//actual implementation
-export default class JsonCustomerDAO implements ICustomerDAO{
-    
+export  class JsonCustomerDAO implements ICustomerDAO{
     public insertCustomer(): number{
         return 1;
     }
@@ -25,5 +23,5 @@ export default class JsonCustomerDAO implements ICustomerDAO{
         let c2= new Customer();
         let list: Array<Customer> = [c1, c2 ];
         return list;
-    } 
+    }
 }

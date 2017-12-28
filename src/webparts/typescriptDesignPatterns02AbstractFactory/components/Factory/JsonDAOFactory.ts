@@ -3,8 +3,10 @@ import ICustomerDAO from "./ICustomerDAO";
 import JsonCustomerDAO from "./JsonCustomerDAO";
 
 
-export default class JsonDAOFactory extends DAOFactory{
+class JsonDAOFactory extends DAOFactory{
     getCustomerDAO(): ICustomerDAO{
         return new JsonCustomerDAO();
     }
 }
+
+export default JsonDAOFactory;

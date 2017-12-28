@@ -1,9 +1,7 @@
 import ICustomerDAO from "./ICustomerDAO";
 import Customer from "./Customer";
 
-//actual implementations
-export default class SharepointCustomerDao implements ICustomerDAO{
-    
+ class SharepointCustomerDao implements ICustomerDAO{
     public insertCustomer(): number{
         return 1;
     }
@@ -25,5 +23,7 @@ export default class SharepointCustomerDao implements ICustomerDAO{
         let c2= new Customer();
         let list: Array<Customer> = [c1, c2 ];
         return list;
-    } 
+    }
 }
+
+export default SharepointCustomerDao;

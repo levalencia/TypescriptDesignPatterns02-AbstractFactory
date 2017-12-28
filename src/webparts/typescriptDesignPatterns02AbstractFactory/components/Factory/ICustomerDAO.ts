@@ -1,9 +1,11 @@
 import Customer from "./Customer";
 
-export default interface ICustomerDAO{
+ interface ICustomerDAO{
     insertCustomer(): number;
     deleteCustomer(): boolean;
     findCustomer(): Customer;
     updateCustomer(): boolean;
     listCustomers(): Customer[];
 }
+
+export default ICustomerDAO;
