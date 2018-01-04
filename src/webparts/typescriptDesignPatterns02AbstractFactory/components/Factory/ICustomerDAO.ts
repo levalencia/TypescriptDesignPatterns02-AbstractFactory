@@ -1,6 +1,6 @@
 import Customer from "./Customer";
 
- interface ICustomerDAO{
+ interface ICustomerDAO {
     insertCustomer(): number;
     deleteCustomer(): boolean;
     findCustomer(): Customer;

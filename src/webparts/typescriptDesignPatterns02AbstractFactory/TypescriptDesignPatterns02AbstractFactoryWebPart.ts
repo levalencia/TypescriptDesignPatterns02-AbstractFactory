@@ -1,25 +1,25 @@
-import * as React from 'react';
-import * as ReactDom from 'react-dom';
-import { Version } from '@microsoft/sp-core-library';
+import * as React from "react";
+import * as ReactDom from "react-dom";
+import { Version } from "@microsoft/sp-core-library";
 import {
   BaseClientSideWebPart,
   IPropertyPaneConfiguration,
-  PropertyPaneTextField,
   PropertyPaneDropdown
-} from '@microsoft/sp-webpart-base';
+} from "@microsoft/sp-webpart-base";
 
-import * as strings from 'typescriptDesignPatterns02AbstractFactoryStrings';
-import TypescriptDesignPatterns02AbstractFactory from './components/TypescriptDesignPatterns02AbstractFactory';
-import { ITypescriptDesignPatterns02AbstractFactoryProps } from './components/ITypescriptDesignPatterns02AbstractFactoryProps';
-import { ITypescriptDesignPatterns02AbstractFactoryWebPartProps } from './ITypescriptDesignPatterns02AbstractFactoryWebPartProps';
+import * as strings from "typescriptDesignPatterns02AbstractFactoryStrings";
+import TypescriptDesignPatterns02AbstractFactory from "./components/TypescriptDesignPatterns02AbstractFactory";
+import { ITypescriptDesignPatterns02AbstractFactoryProps } from "./components/ITypescriptDesignPatterns02AbstractFactoryProps";
+import { ITypescriptDesignPatterns02AbstractFactoryWebPartProps } from "./ITypescriptDesignPatterns02AbstractFactoryWebPartProps";
 
-export default class TypescriptDesignPatterns02AbstractFactoryWebPart extends BaseClientSideWebPart<ITypescriptDesignPatterns02AbstractFactoryWebPartProps> {
+export default class TypescriptDesignPatterns02AbstractFactoryWebPart 
+  extends BaseClientSideWebPart<ITypescriptDesignPatterns02AbstractFactoryWebPartProps> {
 
   public render(): void {
     const element: React.ReactElement<ITypescriptDesignPatterns02AbstractFactoryProps > = React.createElement(
       TypescriptDesignPatterns02AbstractFactory,
       {
-        description: this.properties.datasource
+        datasource: this.properties.datasource
       }
     );
 
@@ -27,7 +27,7 @@ export default class TypescriptDesignPatterns02AbstractFactoryWebPart extends Ba
   }
 
   protected get dataVersion(): Version {
-    return Version.parse('1.0');
+    return Version.parse("1.0");
   }
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -41,13 +41,13 @@ export default class TypescriptDesignPatterns02AbstractFactoryWebPart extends Ba
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneDropdown('datasource', {
-                  label: 'DataSource',
+                PropertyPaneDropdown("datasource", {
+                  label: "DataSource",
                   options: [
-                  { key: '1', text: 'Sharepoint'},
-                  { key: '2', text: 'JSON' }
-                  ],
-                  selectedKey: '4',
+                      { key: "1", text: "Sharepoint"},
+                      { key: "2", text: "JSON" }
+                    ],
+                  selectedKey: "1",
                   })
               ]
             }
