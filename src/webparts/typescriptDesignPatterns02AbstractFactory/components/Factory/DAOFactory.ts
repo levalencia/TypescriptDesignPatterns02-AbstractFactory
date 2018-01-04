@@ -3,11 +3,7 @@ import SharepointListDAOFactory from "./SharepointListDAOFactory";
 import JsonDAOFactory from "./JsonDAOFactory";
 import DataSources from "./DatasourcesEnum";
 
-
 abstract class DAOFactory {
-
-    public static SHAREPOINTLIST: number = 1;
-    public static REMOTEJSON : number = 2;
 
     public abstract getCustomerDAO(): ICustomerDAO;
 

@@ -29,7 +29,7 @@ export default class TypescriptDesignPatterns02AbstractFactory extends
       };
     }
 
-    private setDaos(datasource): void {
+    private setDaos(datasource: string): void {
       const data: any = datasource === "Sharepoint" ? DataSources.SharepointList : DataSources.JsonData;
       this.customerDao = DAOFactory.getDAOFactory(data).getCustomerDAO();
     }
